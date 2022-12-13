@@ -1,0 +1,44 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "allowImportExportEverywhere": true,
+    "requireConfigFile": false
+  },
+  "plugins": ["prettier"],
+  "extends": [
+    "./.config/.eslintrc.shared.js",
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "__dirname": true,
+    "process": true
+  },
+  "rules": {
+    "consistent-return": "warn",
+    "default-param-last": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/named": "off",
+    "import/no-cycle": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "no-console": "warn",
+    "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 0 }],
+    "no-redeclare": 2,
+    "no-shadow": "off",
+    "no-undef": "warn",
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "prettier/prettier": 2,
+    "react/destructuring-assignment": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
+}
