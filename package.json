@@ -16,7 +16,8 @@
   "source": "src/index.js",
   "scripts": {
     "build": "rollup -c .config/rollup.config.js",
-    "build:dev": "NODE_ENV=development rollup -c .config/rollup.config.js -w"
+    "dev": "NODE_ENV=development rollup -c .config/rollup.config.js -w",
+    "publish": "npm publish --access=public"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
@@ -41,7 +42,6 @@
     "rollup-plugin-visualizer": "^5.8.3"
   },
   "dependencies": {
-    "esm": "^3.2.25",
     "remove": "^0.1.5"
   }
 }
