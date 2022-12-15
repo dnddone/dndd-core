@@ -2,6 +2,8 @@ const { babel } = require('@rollup/plugin-babel');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const analyzer = require('rollup-plugin-analyzer');
 const sourcemaps = require('rollup-plugin-sourcemaps');
+const alias = require('@rollup/plugin-alias');
+const remove = require('rollup-plugin-delete');
 const { terser } = require('rollup-plugin-terser');
 const { visualizer } = require('rollup-plugin-visualizer');
 
@@ -16,6 +18,13 @@ module.exports = {
   },
   external: [/@babel\/runtime/],
   plugins: [
+    remove({ targets: 'dist/*' }),
+    alias({
+      entries: [
+        { find: '@constants', replacement: '../src/constants' },
+        { find: '@utils', replacement: '../src/utils' },
+      ],
+    }),
     nodeResolve({
       moduleDirectories: ['node_modules'],
     }),

@@ -14,6 +14,17 @@
     "__dirname": true,
     "process": true
   },
+  "settings": {
+    "import/resolver": {
+      "eslint-import-resolver-custom-alias": {
+        "alias": {
+          "@constants": "src/constants",
+          "@utils": "src/utils"
+        },
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
   "rules": {
     "consistent-return": "warn",
     "default-param-last": "off",

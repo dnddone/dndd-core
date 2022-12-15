@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "*": ["*", "src/*"]
+      "@constants": ["constants"],
+      "@constants/*": ["constants/*"],
+
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"]
     },
     "jsx": "react"
   },
